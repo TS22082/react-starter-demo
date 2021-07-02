@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Typography from "./components/Typography/Typography";
+import Nav from "./components/Nav/Nav";
 
 function App() {
+  const arr = ["Thomas", "Jernice", "Seena"];
+  const name = "Thomas";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+
+      <Typography color="pink">Hello world</Typography>
+      <Typography color="red">React is Cool</Typography>
+
+      {arr.map((name) => (
+        <Typography color="purple">{name}</Typography>
+      ))}
     </div>
   );
 }
