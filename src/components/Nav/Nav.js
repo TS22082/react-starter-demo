@@ -1,14 +1,15 @@
 import React from "react";
+import "./Nav.css";
 
-const Nav = () => {
+const Nav = (props) => {
   const styles = {
     nav: {
       width: "100%",
-      height: "10vh",
+      height: props.height,
       minHeight: "50px",
       display: "flex",
       backgroundColor: "black",
-      color: "white",
+      color: props.textColor,
       justifyContent: "space-around",
       alignItems: "center",
     },
@@ -24,7 +25,7 @@ const Nav = () => {
     <div style={styles.nav}>
       <h1 id="red">Title</h1>
       <ul style={styles.navList}>
-        <li>Home</li>
+        <li className="red">Home</li>
         <li>About</li>
         <li>Contact</li>
       </ul>

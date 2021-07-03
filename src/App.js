@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav height="10vh" textColor="whitesmoke" />
 
       <Typography color="pink">Hello world</Typography>
       <Typography color="red">React is Cool</Typography>
@@ -17,6 +17,8 @@ function App() {
       {arr.map((name) => (
         <Typography color="purple">{name}</Typography>
       ))}
+
+      <h1 className="red">please dont</h1>
     </div>
   );
 }
