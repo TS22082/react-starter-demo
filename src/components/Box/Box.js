@@ -1,14 +1,14 @@
 import React from "react";
 
-const Box = (props) => {
-  const styles = {
+const Box = () => {
+  const boxStyles = {
     width: "200px",
     height: "200px",
-    backgroundColor: props.color ? props.color : "white",
-    border: props.border ? props.border : "solid black",
+    backgroundColor: "pink",
+    margin: "10px",
   };
 
-  return <div style={styles}></div>;
+  return <div style={boxStyles}></div>;
 };
 
 export default Box;

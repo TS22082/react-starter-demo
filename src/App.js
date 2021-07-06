@@ -1,31 +1,28 @@
 import logo from "./logo.svg";
+import Box from "./Components/Box/Box";
+import Nav from "./Components/Nav/Nav";
 import "./App.css";
-import Typography from "./components/Typography/Typography";
-import Nav from "./components/Nav/Nav";
-import ChildrenDemo from "./components/ChildrenDemo/ChildrenDemo";
-import Box from "./components/Box/Box";
+import Main from "./Components/Main/Main";
+import SideNav from "./Components/SideNav/SideNav";
 
 function App() {
-  const arr = ["Thomas", "Jernice", "Seena"];
-  const name = "Thomas";
+  const divStyles = {
+    width: "100%",
+    display: "flex",
+  };
 
   return (
     <div className="App">
-      <Nav textColor="white" />
-      <ChildrenDemo>Hello Jernice</ChildrenDemo>
-
-      <Box color="pink" />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
+      <Nav />
+      <div style={divStyles}>
+        <SideNav />
+        <Main>
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+        </Main>
+      </div>
     </div>
   );
 }
