@@ -21,6 +21,9 @@ function App() {
           <Box />
           <Box />
           <Box />
+          <Box />
+          <Box />
+          <Box />
         </Main>
       </div>
     </div>

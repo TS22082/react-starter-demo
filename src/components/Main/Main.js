@@ -5,10 +5,8 @@ const Main = (props) => {
     display: "flex",
     minHeight: "90vh",
     width: "70%",
-    justifyContent: "center",
-    flexWrap: "wrap",
     alignItems: "center",
-    alignContent: "center",
+    flexDirection: "column",
   };
   return <main style={mainStyles}>{props.children}</main>;
 };

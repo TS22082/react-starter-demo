@@ -2,7 +2,7 @@ import React from "react";
 
 const Box = () => {
   const boxStyles = {
-    width: "200px",
+    width: "80%",
     height: "200px",
     backgroundColor: "pink",
     margin: "10px",

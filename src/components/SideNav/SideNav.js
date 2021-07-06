@@ -5,13 +5,11 @@ const SideNav = () => {
     height: "90vh",
     width: "30%",
     backgroundColor: "gray",
+    position: "sticky",
+    top: "10vh",
   };
 
-  return (
-    <div style={sideNavStyles}>
-      <h1>hello</h1>
-    </div>
-  );
+  return <div style={sideNavStyles}></div>;
 };
 
 export default SideNav;
