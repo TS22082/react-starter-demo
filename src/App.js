@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Typography from "./components/Typography/Typography";
 import Nav from "./components/Nav/Nav";
+import ChildrenDemo from "./components/ChildrenDemo/ChildrenDemo";
+import Box from "./components/Box/Box";
 
 function App() {
   const arr = ["Thomas", "Jernice", "Seena"];
@@ -9,16 +11,21 @@ function App() {
 
   return (
     <div className="App">
-      <Nav height="10vh" textColor="whitesmoke" />
+      <Nav textColor="white" />
+      <ChildrenDemo>Hello Jernice</ChildrenDemo>
 
-      <Typography color="pink">Hello world</Typography>
-      <Typography color="red">React is Cool</Typography>
-
-      {arr.map((name) => (
-        <Typography color="purple">{name}</Typography>
-      ))}
-
-      <h1 className="red">please dont</h1>
+      <Box color="pink" />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
+      <Box />
     </div>
   );
 }

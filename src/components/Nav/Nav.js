@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Nav.css";
 
-const Nav = (props) => {
+const Nav = () => {
+  const [scrollY, setScroll] = useState(false);
+
   const styles = {
     nav: {
       width: "100%",
-      height: props.height,
+      height: "10vh",
       minHeight: "50px",
       display: "flex",
-      backgroundColor: "black",
-      color: props.textColor,
+      position: "fixed",
+      top: "0",
+      backgroundColor: !scrollY ? "transparent" : "black",
+      color: !scrollY ? "black" : "white",
+      borderBottom: !scrollY ? "solid black" : "none",
       justifyContent: "space-around",
       alignItems: "center",
+      transition: "background-color .5s",
     },
     navList: {
       display: "inline-flex",
@@ -21,9 +27,18 @@ const Nav = (props) => {
     },
   };
 
+  const checkPosition = () =>
+    window.scrollY > 50 ? setScroll(true) : setScroll(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkPosition);
+    return () => {
+      window.removeEventListener("scroll", checkPosition);
+    };
+  }, []);
+
   return (
     <div style={styles.nav}>
-      <h1 id="red">Title</h1>
       <ul style={styles.navList}>
         <li className="red">Home</li>
         <li>About</li>
